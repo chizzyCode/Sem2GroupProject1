@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CA2 Project | Machine Learning</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">CA2 Project</a>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="dataset.html">Dataset</a>
+      <a class="nav-link" href="analysis.html">Analysis</a>
+      <a class="nav-link active" href="ml.html">Machine Learning</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <h1 class="h3 fw-bold">Machine Learning</h1>
+  <p class="text-muted">Classification using Logistic Regression to predict Subscription Status.</p>
+
+  <div class="placeholder-box">
+    <h5 class="mb-2">Model Summary</h5>
+    <ul class="mb-0">
+      <li><strong>Model:</strong> Logistic Regression (Classification)</li>
+      <li><strong>Target:</strong> Subscription Status (Yes/No encoded as 1/0)</li>
+      <li><strong>Train/Test Split:</strong> 80% / 20%</li>
+      <li><strong>Accuracy:</strong> 0.864 (86.4%)</li>
+      <li><strong>Confusion Matrix:</strong> TN=463, FP=106, FN=0, TP=211</li>
+      <li><strong>Most important factors (by coefficient):</strong> Discount Applied, Promo Code Used, Gender, Previous Purchases, Season</li>
+    </ul>
+    <div class="mt-2">:contentReference[oaicite:10]{index=10}</div>
+  </div>
+
+  <section class="section">
+    <h2 class="h5">Results Visualisation</h2>
+    <p class="text-muted">Confusion matrix and top feature impact plot (exported from the ML script).</p>
+
+    <div class="card">
+      <div class="card-body">
+        <img class="img-fluid" src="assets/img/subscription_ml_results.png" alt="Machine learning results chart">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="h5">Plain-English Explanation</h2>
+    <div class="placeholder-box">
+      <p class="mb-0">
+        The model attempts to predict whether a customer is a subscriber based on shopping behaviour and customer attributes.
+        An accuracy of ~86% means the model correctly predicted the subscription status for most customers in the test set.
+        Like all models, performance depends on the quality of the dataset and the features included.
+        :contentReference[oaicite:11]{index=11}
+      </p>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
